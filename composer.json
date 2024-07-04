@@ -1,0 +1,25 @@
+{
+    "name": "filefabrik/bootraiser-testing",
+    "description": "Bootraiser Testing Package",
+    "type": "library",
+    "version": "v2.0.0",
+    "license": "proprietary",
+    "require": {
+        "filefabrik/bootraiser": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Filefabrik\\BootraiserTesting\\": "src/",
+            "Filefabrik\\BootraiserTesting\\Database\\Factories\\": "database/factories/",
+            "Filefabrik\\BootraiserTesting\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Filefabrik\\BootraiserTesting\\Providers\\BootraiserTestingServiceProvider"
+            ]
+        }
+    }
+}
