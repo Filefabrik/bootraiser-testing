@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Filefabrik\BootraiserTesting\Providers;
 
@@ -7,28 +7,9 @@ use Illuminate\Support\ServiceProvider;
 
 class BootraiserTestingServiceProvider extends ServiceProvider
 {
-    /**
-     * Configurable
-     *
-     * @var array
-     */
-    public static array $bootraiser = ['register',
-                                       'boot' => [
-                                           'publishConfigs',
-                                           'Views',
-                                           'Migrations',
-                                           'loadRoutes',
-                                           'publishRoutes',
-                                           'Translations',
-                                           'Views',
-                                           'Components',
-                                           'Commands',
-                                           'Assets',
-                                           'Livewire'],
-    ];
-
     public function register()
     {
+        parent::register();
         Raiser::forProvider($this)
               ->registerConfigs()
         ;
@@ -37,7 +18,7 @@ class BootraiserTestingServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Raiser::forProvider($this)
-              ->runFromArray(self::$bootraiser['boot'])
+              ->runFromArray(config('bootraiser-testing.boot'))
         ;
     }
 }
