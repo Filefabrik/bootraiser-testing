@@ -25,7 +25,6 @@ class PlaySendMails extends Command
 	 */
 	public function handle()
 	{
-
 		$this->line('works: '.__FILE__);
 	}
 }

@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Route;
  * Test double route
  */
 Route::prefix('default-package-web')
-     ->group(function() {
-         Route::get(
-             'index',
-             function() {
-                 return 'Paxsy Route in: ' . ' bootraiser-test/default-package-web';
-             },
-         );
-     })
+	 ->group(function() {
+	 	Route::get(
+	 		'index',
+	 		function() {
+	 			return 'Paxsy Route in: '.' bootraiser-test/default-package-web';
+	 		},
+	 	);
+	 })
 ;
 
 // use Filefabrik\BootraiserTesting\Http\Controllers\Demo1Controller;
