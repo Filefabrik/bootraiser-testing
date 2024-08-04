@@ -7,11 +7,11 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 
 class BootraiserTestingEventServiceProvider extends EventServiceProvider
 {
-    use WithBootraiserEvent;
+	use WithBootraiserEvent;
 
-    public function register()
-    {
-        parent::register();
-        $this->registeringEvents();
-    }
+	public function register()
+	{
+		parent::register();
+		$this->registeringEvents();
+	}
 }
