@@ -7,18 +7,19 @@ use Illuminate\Support\ServiceProvider;
 
 class BootraiserTestingServiceProvider extends ServiceProvider
 {
-    public function register()
-    {
-        parent::register();
-        Raiser::forProvider($this)
-              ->registerConfigs()
-        ;
-    }
+	public function register()
+	{
+		parent::register();
+		Raiser::forProvider($this)
+			  ->loadConfigs()
+		;
+	}
 
-    public function boot(): void
-    {
-        Raiser::forProvider($this)
-              ->runFromArray(config('bootraiser-testing.boot'))
-        ;
-    }
+	public function boot(): void
+	{
+		$cfg = config('bootraiser-testing.boot');
+		Raiser::forProvider($this)
+			  ->runFromArray($cfg)
+		;
+	}
 }

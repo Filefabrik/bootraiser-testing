@@ -10,8 +10,10 @@ return new class() extends Migration {
 	 */
 	public function up(): void
 	{
-		Schema::create('allies_brs', function(Blueprint $table) {
+		Schema::create('br_testing_allies', function(Blueprint $table) {
 			$table->id();
+			$table->string('name');
+			$table->string('email');
 			$table->timestamps();
 		});
 	}
@@ -21,6 +23,6 @@ return new class() extends Migration {
 	 */
 	public function down(): void
 	{
-		Schema::dropIfExists('allies');
+		Schema::dropIfExists('br_testing_allies');
 	}
 };
