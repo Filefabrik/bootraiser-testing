@@ -18,7 +18,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Filefabrik\\BootraiserTesting\\Providers\\BootraiserTestingServiceProvider"
+                "Filefabrik\\BootraiserTesting\\Providers\\BootraiserTestingServiceProvider",
+                "Filefabrik\\BootraiserTesting\\Providers\\BootraiserTestingEventServiceProvider"
             ]
         }
     }

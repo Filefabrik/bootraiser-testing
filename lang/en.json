@@ -1,0 +1,6 @@
+{
+    "bootraiser-testing::client.client-name": "bootraiser-testing -> de -> de.json -> client-name-de FULL bootraiser-testing::client.client-name-de",
+    "spookey": "en in json",
+    "auth.failed": "' auth failed json from package dir",
+    "bootraiser-testing::auth.failed": "bootraiser-testing::auth.failed auth failed in package lang dir"
+}
